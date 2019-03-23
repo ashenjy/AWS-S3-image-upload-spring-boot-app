@@ -57,14 +57,16 @@ s3client.putObject(new PutObjectRequest(bucketName, fileName, file));
 
 2. Copied the aws-image upload app's jar file to the ec2 instances using below commands
 
+```
     sudo scp -i awsPrivateKey.pem target/aws-assignment-s3-0.0.1-SNAPSHOT.jar ubuntu@13.126.13.229:/var/tmp
     sudo ssh -i awsPrivateKey.pem ubuntu@13.126.13.229
     Copied tmp folder to home folder
     cp /var/tmp/aws-assignment-s3-0.0.1-SNAPSHOT.jar .
+ ```
     
 3. Run the java app using below command
 
-   java -jar aws-assignment-s3-0.0.1-SNAPSHOT.jar
+  ``` java -jar aws-assignment-s3-0.0.1-SNAPSHOT.jar```
    
 4. when login in next time, Don't forget to change the ip address of your computer in the security group section of ec2 instance port 22.
  
